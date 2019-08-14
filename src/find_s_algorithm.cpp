@@ -8,17 +8,24 @@ int main(int argc, char const *argv[]) {
     vector<string> in1 = { "Sunny", "Warm", "Normal", "Strong", "Warm", "Same" };
     vector<string> in2 = { "Sunny", "Warm", "High", "Strong", "Warm", "Same" };
 
-    vector<training_element> training_set = {
-        training_element(in1, true), training_element(in2, true)
-    };
+    vector<training_element> training_set;
 
-    vector<string> hypothesis = { "{}", "{}", "{}", "{}", "{}", "{}" };
+    if (argc > 1) {
+        string filename = string(argv[1]);
+        read_training_set(training_set, filename);
 
-    adjust_hypothesis(hypothesis, training_set);
+        // using '{}' as notation for empty set
+        vector<string> hypothesis = { "{}", "{}", "{}", "{}", "{}", "{}" };
 
-    for (string s : hypothesis) {
-        cout << s << " ";
+        adjust_hypothesis(hypothesis, training_set);
+
+        cout << hypothesis << endl;
+
+        return 0;
     }
-
-    return 0;
+    else {
+        cout << "no file name specified" << endl;
+        return 1;
+    }
+    
 }

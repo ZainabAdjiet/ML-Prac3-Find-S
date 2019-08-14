@@ -9,6 +9,8 @@
 #include <string>
 #include <vector>
 #include <cassert>
+#include <fstream>
+#include <sstream>
 
 /****************************************************************/
 /* Functions												    */
@@ -22,7 +24,9 @@ namespace find_s {
         training_element(std::vector<std::string> & instance, bool enjoy_sport);
     };
 
+    void read_training_set(std::vector<training_element> & training_set, std::string filename);
     void adjust_hypothesis(std::vector<std::string> & hypothesis, const std::vector<training_element> & training_set);
+    std::ostream & operator<<(std::ostream & os, const std::vector<std::string> & str_vect);
 }
 
 #endif
