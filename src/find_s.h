@@ -27,6 +27,7 @@ namespace find_s {
     void read_training_set(std::vector<training_element> & training_set, std::string filename);
     void adjust_hypothesis(std::vector<std::string> & hypothesis, const std::vector<training_element> & training_set);
     std::ostream & operator<<(std::ostream & os, const std::vector<std::string> & str_vect);
+    std::ostream & operator<<(std::ostream & os, const training_element & element);
 }
 
 #endif

@@ -4,15 +4,15 @@ using namespace find_s;
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-    
-    vector<string> in1 = { "Sunny", "Warm", "Normal", "Strong", "Warm", "Same" };
-    vector<string> in2 = { "Sunny", "Warm", "High", "Strong", "Warm", "Same" };
-
     vector<training_element> training_set;
 
     if (argc > 1) {
         string filename = string(argv[1]);
         read_training_set(training_set, filename);
+
+        for (training_element el : training_set) {
+            cout << el << endl;
+        }
 
         // using '{}' as notation for empty set
         vector<string> hypothesis = { "{}", "{}", "{}", "{}", "{}", "{}" };

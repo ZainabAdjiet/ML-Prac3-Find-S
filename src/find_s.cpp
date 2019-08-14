@@ -62,3 +62,8 @@ std::ostream & find_s::operator<<(std::ostream & os, const std::vector<std::stri
     os << str_vect[i] << " >";
     return os;
 }
+
+std::ostream & find_s::operator<<(std::ostream & os, const training_element & element) {
+    os << "< " << element.instance << ", " << element.enjoy_sport << " >";
+    return os;
+}
