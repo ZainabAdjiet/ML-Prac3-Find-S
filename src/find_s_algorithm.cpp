@@ -10,6 +10,7 @@ int main(int argc, char const *argv[]) {
         string filename = string(argv[1]);
         read_training_set(training_set, filename);
 
+        cout << "Training set:" << endl;
         for (training_element el : training_set) {
             cout << el << endl;
         }
@@ -19,6 +20,7 @@ int main(int argc, char const *argv[]) {
 
         adjust_hypothesis(hypothesis, training_set);
 
+        cout << endl << "Hypothesis:" << endl;
         cout << hypothesis << endl;
 
         return 0;
