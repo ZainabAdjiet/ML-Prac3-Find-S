@@ -1,0 +1,22 @@
+Starting hypothesis: < {}, {}, {}, {}, {}, {} >
+
+Example training set:
+
+Training instance: < < Sunny, Warm, Normal, Strong, Warm, Same >, 1 >
+Adjusted hypothesis: < Sunny, Warm, Normal, Strong, Warm, Same >
+
+Training instance: < < Sunny, Warm, High, Strong, Warm, Same >, 1 >
+Adjusted hypothesis: < Sunny, Warm, ?, Strong, Warm, Same >
+
+Training instance: < < Rainy, Cold, High, Strong, Warm, Change >, 0 >
+Adjusted hypothesis: < Sunny, Warm, ?, Strong, Warm, Same >
+
+Training instance: < < Sunny, Warm, High, Strong, Cool, Change >, 1 >
+Adjusted hypothesis: < Sunny, Warm, ?, Strong, ?, ? >
+
+Additional training instances:
+
+Training instance: < < Sunny, Warm, High, Weak, Cool, Change >, 1 >
+Adjusted hypothesis: < Sunny, Warm, ?, ?, ?, ? >
+
+Target concept learnt with 1 additional instance(s)

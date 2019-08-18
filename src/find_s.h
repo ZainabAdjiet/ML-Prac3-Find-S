@@ -2,18 +2,17 @@
 #define FIND_S_H
 
 /****************************************************************/
-/* Includes														*/
+/* Includes
 /****************************************************************/
 
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cassert>
 #include <fstream>
 #include <sstream>
 
 /****************************************************************/
-/* Functions												    */
+/* Functions
 /****************************************************************/
 
 namespace find_s {
@@ -24,8 +23,8 @@ namespace find_s {
         training_element(std::vector<std::string> & instance, bool enjoy_sport);
     };
 
-    void read_training_set(std::vector<training_element> & training_set, std::string filename);
-    void adjust_hypothesis(std::vector<std::string> & hypothesis, const std::vector<training_element> & training_set);
+    void load_training_set(std::vector<training_element> & training_set, std::string filename);
+    void adjust_hypothesis(std::vector<std::string> & hypothesis, const training_element & element);
     std::ostream & operator<<(std::ostream & os, const std::vector<std::string> & str_vect);
     std::ostream & operator<<(std::ostream & os, const training_element & element);
 }
